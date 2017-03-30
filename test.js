@@ -6,7 +6,7 @@ const path = require('path')
 const fs = require('fs')
 
 Nightmare.action('screenshotSelector', screenshotSelector)
-var nightmare = Nightmare()
+var nightmare
 
 var screenFile = path.join(__dirname, 'screen.png')
 
@@ -21,17 +21,23 @@ describe('ScreenshotSelector', function () {
   beforeEach(function (done) {
     cleanScreenFile(function (err) {
       if (err) return done(err)
+      nightmare = Nightmare({show: true})
       nightmare
         .goto('https://example.com/')
         .wait('h1')
-        .wait(500)
         .then(function () {
           done()
         })
     })
   })
 
-  afterEach(cleanScreenFile)
+  afterEach(function (done) {
+    nightmare
+      .end()
+      .then(function () {
+        cleanScreenFile(done)
+      })
+  })
 
   it('should throw an error with a bad selector', function (done) {
     var passed = false
