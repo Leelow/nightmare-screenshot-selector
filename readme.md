@@ -2,7 +2,6 @@
 [![NPM downloads][downloads-image]][downloads-url]
 [![Build Status][travis-image]][travis-url]
 [![Build Status][appveyor-image]][appveyor-url]
-[![Codacy Grade][codacy-grade-image]][codacy-grade-url]
 [![Dependencies][dependencies-image]][dependencies-url]
 [![Dev-dependencies][dev-dependencies-image]][dev-dependencies-url]
 [![JavaScript Style Guide][javascript-standard-image]][javascript-standard-url]
