@@ -9,6 +9,7 @@ Nightmare.action('screenshotSelector', screenshotSelector)
 var nightmare = Nightmare({})
 
 var screenFile = path.join(__dirname, 'screen.png')
+console.log(screenFile)
 
 function cleanScreenFile (callback) {
   fs.exists(screenFile, function (exists) {
@@ -63,10 +64,10 @@ describe('ScreenshotSelector', function () {
 
   it('should take a screenshot and save it as a file', function (done) {
     nightmare
-      .screenshotSelector({selector: 'h1', path: 'screen.png'})
+      .screenshotSelector({selector: 'h1', path: screenFile})
       .catch(done)
       .then(function () {
-        fs.exists('screen.png', function (exists) {
+        fs.exists(screenFile, function (exists) {
           assert.ok(exists)
           done()
         })
