@@ -1,0 +1,12 @@
+node_modules
+npm-debug.log
+
+.gitignore
+
+screen.png
+test.js
+
+readme.md
+
+.idea
+nightmare-screenshot-selector.iml

@@ -1,0 +1,36 @@
+{
+  "name": "nightmare-screenshot-selector",
+  "version": "1.0.0",
+  "main": "index.js",
+  "description": "A Nightmare plugin to easily take screenshots.",
+  "license": "MIT",
+  "author": {
+    "name": "Leo Lozach",
+    "email": "leo.lozach@gmail.com",
+    "url": "https://github.com/Leelow"
+  },
+  "scripts": {
+    "prepublish": "npm test",
+    "test": "standard && node \"./node_modules/mocha/bin/_mocha\" --timeout 5000 test.js"
+  },
+  "devDependencies": {
+    "mocha": "^3.2.0",
+    "nightmare": "^2.10.0",
+    "standard": "^9.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Leelow/nightmare-screenshot-selector.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Leelow/nightmare-screenshot-selector/issues"
+  },
+  "homepage": "https://github.com/Leelow/nightmare-screenshot-selector#readme",
+  "keywords": [
+    "nightmare",
+    "plugin",
+    "screenshot",
+    "selector",
+    "headless"
+  ]
+}
