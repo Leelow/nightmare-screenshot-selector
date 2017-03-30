@@ -2,7 +2,7 @@
 [![NPM downloads][downloads-image]][downloads-url]
 [![Build Status][travis-image]][travis-url]
 [![Build Status][appveyor-image]][appveyor-url]
-[![Codacy Coverage][codacy-coverage-image]][codacy-coverage-url]
+<!--- [![Codacy Coverage][codacy-coverage-image]][codacy-coverage-url] --->
 [![Codacy Grade][codacy-grade-image]][codacy-grade-url]
 [![Dependencies][dependencies-image]][dependencies-url]
 [![Dev-dependencies][dev-dependencies-image]][dev-dependencies-url]
@@ -58,8 +58,8 @@ $ npm test
 [appveyor-url]: https://ci.appveyor.com/project/Leelow/nightmare-screenshot-selector
 <!--- [codacy-coverage-image]: https://api.codacy.com/project/badge/Coverage/32e42e7d81a343e1a9ea01326ca74a40 --->
 <!--- [codacy-coverage-url]: https://www.codacy.com/app/Leelow/sha512sum?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Leelow/sha512sum&amp;utm_campaign=Badge_Coverage --->
-<!--- [codacy-grade-image]: https://api.codacy.com/project/badge/Grade/32e42e7d81a343e1a9ea01326ca74a40 --->
-<!--- [codacy-grade-url]: https://www.codacy.com/app/Leelow/sha512sum?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Leelow/sha512sum&amp;utm_campaign=Badge_Grade --->
+[codacy-grade-image]: https://api.codacy.com/project/badge/Grade/290aa0752e4643dd8200c6a1d2a90e29
+[codacy-grade-url]: https://www.codacy.com/app/Leelow/nightmare-screenshot-selector?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Leelow/nightmare-screenshot-selector&amp;utm_campaign=Badge_Grade
 [dependencies-image]: https://david-dm.org/leelow/nightmare-screenshot-selector/status.svg
 [dependencies-url]: https://david-dm.org/leelow/nightmare-screenshot-selector?type=dev
 [dev-dependencies-image]: https://david-dm.org/leelow/nightmare-screenshot-selector/dev-status.svg
