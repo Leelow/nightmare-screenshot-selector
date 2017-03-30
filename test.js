@@ -19,18 +19,19 @@ function cleanScreenFile (callback) {
 }
 
 describe('ScreenshotSelector', function () {
-  before(function (done) {
+  beforeEach(function (done) {
     cleanScreenFile(function (err) {
       if (err) return done(err)
       nightmare
         .goto('https://example.com/')
+        .wait('h1')
         .then(function () {
           done()
         })
     })
   })
 
-  after(cleanScreenFile)
+  afterEach(cleanScreenFile)
 
   it('should throw an error with a bad selector', function (done) {
     nightmare
