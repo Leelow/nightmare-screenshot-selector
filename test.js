@@ -6,10 +6,9 @@ const path = require('path')
 const fs = require('fs')
 
 Nightmare.action('screenshotSelector', screenshotSelector)
-var nightmare = Nightmare({})
+var nightmare = Nightmare()
 
 var screenFile = path.join(__dirname, 'screen.png')
-console.log(screenFile)
 
 function cleanScreenFile (callback) {
   fs.exists(screenFile, function (exists) {
@@ -25,6 +24,7 @@ describe('ScreenshotSelector', function () {
       nightmare
         .goto('https://example.com/')
         .wait('h1')
+        .wait(500)
         .then(function () {
           done()
         })
@@ -34,13 +34,17 @@ describe('ScreenshotSelector', function () {
   afterEach(cleanScreenFile)
 
   it('should throw an error with a bad selector', function (done) {
+    var passed = false
     nightmare
       .screenshotSelector('wrong selector')
       .catch(function (err) {
         assert.equal(err.message, 'Selector "wrong selector" does not correspond to an element.')
+        passed = true
+      })
+      .then(function () {
+        assert.ok(passed)
         done()
       })
-      .then()
   })
 
   it('should take a screenshot with a string as argument', function (done) {

@@ -10,7 +10,6 @@
     "url": "https://github.com/Leelow"
   },
   "scripts": {
-    "prepublish": "npm test",
     "test": "standard && node \"./node_modules/mocha/bin/_mocha\" --timeout 15000 test.js"
   },
   "devDependencies": {
