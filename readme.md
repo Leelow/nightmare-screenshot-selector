@@ -54,7 +54,7 @@ $ npm test
 [downloads-url]: https://www.npmjs.com/package/nightmare-screenshot-selector
 [travis-image]: https://travis-ci.org/Leelow/nightmare-screenshot-selector.svg?branch=master
 [travis-url]: https://travis-ci.org/Leelow/nightmare-screenshot-selector
-<!--- [appveyor-image]: https://ci.appveyor.com/api/projects/status/ltppe1sp0ucnm6r3?svg=true --->
+[appveyor-image]: https://ci.appveyor.com/api/projects/status/qd3uu82sk5qc41ii?svg=true
 [appveyor-url]: https://ci.appveyor.com/project/Leelow/nightmare-screenshot-selector
 <!--- [codacy-coverage-image]: https://api.codacy.com/project/badge/Coverage/32e42e7d81a343e1a9ea01326ca74a40 --->
 <!--- [codacy-coverage-url]: https://www.codacy.com/app/Leelow/sha512sum?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Leelow/sha512sum&amp;utm_campaign=Badge_Coverage --->
