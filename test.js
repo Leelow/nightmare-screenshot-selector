@@ -2,34 +2,34 @@
 const Nightmare = require('nightmare')
 const screenshotSelector = require('./index.js')
 const assert = require('assert')
+const path = require('path')
 const fs = require('fs')
 
 Nightmare.action('screenshotSelector', screenshotSelector)
 var nightmare = Nightmare({})
 
+var screenFile = path.join(__dirname, 'screen.png')
+
+function cleanScreenFile (callback) {
+  fs.exists(screenFile, function (exists) {
+    if (!exists) callback()
+    else fs.unlink(screenFile, callback)
+  })
+}
+
 describe('ScreenshotSelector', function () {
   before(function (done) {
-    var cb = function () {
+    cleanScreenFile(function (err) {
+      if (err) return done(err)
       nightmare
         .goto('https://example.com/')
         .then(function () {
           done()
         })
-    }
-    fs.exists('screen.png', function (exists) {
-      if (!exists) cb()
-      else {
-        fs.unlink('screen.png', function (err) {
-          if (err) done(err)
-          cb()
-        })
-      }
     })
   })
 
-  after(function (done) {
-    fs.unlink('screen.png', done)
-  })
+  after(cleanScreenFile)
 
   it('should throw an error with a bad selector', function (done) {
     nightmare
