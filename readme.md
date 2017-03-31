@@ -1,4 +1,6 @@
 # nightmare-screenshot-selector
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/Leelow/nightmare-screenshot-selector.svg)](https://greenkeeper.io/)
 [![NPM downloads][downloads-image]][downloads-url]
 [![Build Status][travis-image]][travis-url]
 [![Build Status][appveyor-image]][appveyor-url]
