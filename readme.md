@@ -40,7 +40,7 @@ nightmare
 ```
 
 ## Test
-You juste have to clone the repo and run
+You just have to clone the repo and run
 
 ```
 $ npm test
