@@ -5,6 +5,10 @@ node_js:
   - "5"
   - "4"
 
+os:
+  - linux
+  - osx
+
 addons:
   apt:
     packages:
