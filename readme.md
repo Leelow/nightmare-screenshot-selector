@@ -1,6 +1,7 @@
 # nightmare-screenshot-selector
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/Leelow/nightmare-screenshot-selector.svg)](https://greenkeeper.io/)
+[![npm version][npm-version-image]][npm-version-url]
 [![NPM downloads][downloads-image]][downloads-url]
 [![Build Status][travis-image]][travis-url]
 [![Build Status][appveyor-image]][appveyor-url]
@@ -50,6 +51,8 @@ $ npm test
 
 [MIT](LICENSE) © [Léo Lozach](https://github.com/Leelow)
 
+[npm-version-image]: https://badge.fury.io/js/nightmare-screenshot-selector.svg
+[npm-version-url]: https://www.npmjs.com/package/nightmare-screenshot-selector
 [downloads-image]: https://img.shields.io/npm/dt/nightmare-screenshot-selector.svg?maxAge=3600
 [downloads-url]: https://www.npmjs.com/package/nightmare-screenshot-selector
 [travis-image]: https://travis-ci.org/Leelow/nightmare-screenshot-selector.svg?branch=master
