@@ -11,9 +11,13 @@ var nightmare
 var screenFile = path.join(__dirname, 'screen.png')
 
 function cleanScreenFile (callback) {
-  fs.exists(screenFile, function (exists) {
-    if (!exists) callback()
-    else fs.unlink(screenFile, callback)
+  fs.stat(screenFile, function (err, stats) {
+    if (err && err.code === 'ENOENT') return callback()
+    else if (err) return callback(err)
+    else {
+      if (stats.isFile()) fs.unlink(screenFile, callback)
+      else callback()
+    }
   })
 }
 
@@ -21,7 +25,7 @@ describe('ScreenshotSelector', function () {
   beforeEach(function (done) {
     cleanScreenFile(function (err) {
       if (err) return done(err)
-      nightmare = Nightmare({show: true})
+      nightmare = Nightmare({show: false})
       nightmare
         .goto('https://example.com/')
         .wait('h1')
@@ -78,9 +82,13 @@ describe('ScreenshotSelector', function () {
       .screenshotSelector({selector: 'h1', path: screenFile})
       .catch(done)
       .then(function () {
-        fs.exists(screenFile, function (exists) {
-          assert.ok(exists)
-          done()
+        fs.stat(screenFile, function (err, stats) {
+          if (err && err.code === 'ENOENT') return done()
+          else if (err) return done(err)
+          else {
+            if (stats.isFile()) fs.unlink(screenFile, done)
+            else done()
+          }
         })
       })
   })
