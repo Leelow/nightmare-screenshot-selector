@@ -1,12 +1,9 @@
 # nightmare-screenshot-selector
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/Leelow/nightmare-screenshot-selector.svg)](https://greenkeeper.io/)
 [![npm version][npm-version-image]][npm-version-url]
 [![NPM downloads][downloads-image]][downloads-url]
 [![Build Status][travis-image]][travis-url]
 [![Build Status][appveyor-image]][appveyor-url]
-[![Dependencies][dependencies-image]][dependencies-url]
-[![Dev-dependencies][dev-dependencies-image]][dev-dependencies-url]
 [![JavaScript Style Guide][javascript-standard-image]][javascript-standard-url]
 
 > A Nightmare plugin. [https://github.com/segmentio/nightmare](https://github.com/segmentio/nightmare)
@@ -25,6 +22,8 @@ $ npm install --save nightmare-screenshot-selector
 const Nightmare = require('nightmare');
 const screenshotSelector = require('nightmare-screenshot-selector');
 const fs = require('fs')
+
+Nightmare.action('screenshotSelector', screenshotSelector)
 
 var nightmare = Nightmare()
 nightmare
@@ -61,9 +60,5 @@ $ npm test
 [appveyor-url]: https://ci.appveyor.com/project/Leelow/nightmare-screenshot-selector
 [codacy-grade-image]: https://api.codacy.com/project/badge/Grade/290aa0752e4643dd8200c6a1d2a90e29
 [codacy-grade-url]: https://www.codacy.com/app/Leelow/nightmare-screenshot-selector?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Leelow/nightmare-screenshot-selector&amp;utm_campaign=Badge_Grade
-[dependencies-image]: https://david-dm.org/leelow/nightmare-screenshot-selector/status.svg
-[dependencies-url]: https://david-dm.org/leelow/nightmare-screenshot-selector?type=dev
-[dev-dependencies-image]: https://david-dm.org/leelow/nightmare-screenshot-selector/dev-status.svg
-[dev-dependencies-url]: https://david-dm.org/leelow/nightmare-screenshot-selector?type=dev
 [javascript-standard-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg
 [javascript-standard-url]: http://standardjs.com/
