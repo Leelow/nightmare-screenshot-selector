@@ -1,6 +1,6 @@
 {
   "name": "nightmare-screenshot-selector",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "index.js",
   "description": "A Nightmare plugin to easily take screenshots.",
   "license": "MIT",
@@ -13,7 +13,7 @@
     "test": "standard && node \"./node_modules/mocha/bin/_mocha\" --timeout 15000 test.js"
   },
   "devDependencies": {
-    "mocha": "^3.3.0",
+    "mocha": "^3.4.1",
     "nightmare": "^2.10.0",
     "standard": "^10.0.2"
   },

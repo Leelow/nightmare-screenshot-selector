@@ -6,9 +6,7 @@
 [![Build Status][appveyor-image]][appveyor-url]
 [![JavaScript Style Guide][javascript-standard-image]][javascript-standard-url]
 
-> A Nightmare plugin. [https://github.com/segmentio/nightmare](https://github.com/segmentio/nightmare)
-
-A Nightmare plugin to easily take screenshots.
+> A Nightmare plugin to easily take screenshots. [https://github.com/segmentio/nightmare](https://github.com/segmentio/nightmare)
 
 ## Install
 
